@@ -24,7 +24,6 @@ const HomeScreen = () => {
   const [imgActive, setImgActive] = useState(0);
   const [greeting, setGreeting] = useState('');
 
-  /*
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
       const hours = new Date().getHours();
@@ -36,7 +35,6 @@ const HomeScreen = () => {
 
     setGreeting(getTimeOfDayGreeting());
   }, []);
-  */
 
   const getCurrentHour = new Date().getHours();
   
@@ -112,7 +110,7 @@ const HomeScreen = () => {
         {/* GREETING MESSAGE */}
         <View style={styles.greetingContainer}>
           <Text style={styles.greetingText}>
-            {hello}
+            {greeting}, Dummy! {/* replace dummy with {username} */}
           </Text>
         </View>
 
