@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {styles} from '../modules/style';
+import Greeting from '../components/Greeting';
 
 const images = [
   require('../img/promo/yves.jpg'),
@@ -24,9 +25,11 @@ const HomeScreen = () => {
   const [imgActive, setImgActive] = useState(0);
   const [greeting, setGreeting] = useState('');
 
+  /*
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
       const hours = new Date().getHours();
+      console.log(`Current hour: ${hours}`); // Checking purposes
       if (hours < 12) return 'Good Morning';
       if (hours < 18) return 'Good Afternoon';
       return 'Good Evening';
@@ -34,6 +37,7 @@ const HomeScreen = () => {
 
     setGreeting(getTimeOfDayGreeting());
   }, []);
+  */
 
   const onchange = nativeEvent => {
     if (nativeEvent) {
@@ -94,11 +98,7 @@ const HomeScreen = () => {
         </View>
 
         {/* GREETING MESSAGE */}
-        <View style={styles.greetingContainer}>
-          <Text style={styles.greetingText}>
-            {greeting}, Dummy! {/* replace dummy with {username} */}
-          </Text>
-        </View>
+        <Greeting />
 
         {/* BEST SELLERS SECTION */}
         <View style={styles.bestSellersContainer}>
