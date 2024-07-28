@@ -14,6 +14,9 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  scrollViewContent: {
+    paddingBottom: 20, // Add padding to the bottom to ensure all content is visible
+  },
   wrap: {
     width: WIDTH,
     height: HEIGHT * 0.4,

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import {styles} from '../modules/style';
+import { styles } from '../modules/style';
 
 const images = [
   require('../img/promo/yves.jpg'),
@@ -15,9 +15,9 @@ const images = [
 ];
 
 const bestSellers = [
-  {title: 'Tiramisu cake', image: require('../img/food/tiramisu-cake.jpeg')},
-  {title: 'Chocolate cake', image: require('../img/food/chocolate-cake.jpg')},
-  {title: 'Matcha cake', image: require('../img/food/matcha-cake.jpeg')},
+  { title: 'Tiramisu cake', image: require('../img/food/tiramisu-cake.jpeg') },
+  { title: 'Chocolate cake', image: require('../img/food/chocolate-cake.jpg') },
+  { title: 'Matcha cake', image: require('../img/food/matcha-cake.jpeg') },
 ];
 
 const HomeScreen = () => {
@@ -27,7 +27,6 @@ const HomeScreen = () => {
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
       const hours = new Date().getHours();
-      console.log(`Current hour: ${hours}`); // Checking purposes
       if (hours < 12) return 'Good Morning';
       if (hours < 18) return 'Good Afternoon';
       return 'Good Evening';
@@ -35,19 +34,6 @@ const HomeScreen = () => {
 
     setGreeting(getTimeOfDayGreeting());
   }, []);
-
-  const getCurrentHour = new Date().getHours();
-  
-  let hello;
-
-  if (getCurrentHour >= 5 && getCurrentHour < 12) {
-    hello = 'Good Morning';
-  } else if (getCurrentHour >= 12 && getCurrentHour < 18) {
-    hello = 'Good Afternoon';
-  } else {
-    hello = 'Good Evening';
-  }
-
 
   const onchange = nativeEvent => {
     if (nativeEvent) {
@@ -61,16 +47,17 @@ const HomeScreen = () => {
   };
 
   return (
-    <View>
-      <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollViewContent}>
         {/* FOR PHOTO SLIDESHOW */}
         <View style={styles.wrap}>
           <ScrollView
-            onScroll={({nativeEvent}) => onchange(nativeEvent)}
+            onScroll={({ nativeEvent }) => onchange(nativeEvent)}
             showsHorizontalScrollIndicator={false}
             pagingEnabled
             horizontal
-            style={styles.wrap}>
+            style={styles.wrap}
+          >
             {images.map((e, index) => (
               <Image
                 key={index}
@@ -85,7 +72,8 @@ const HomeScreen = () => {
             {images.map((e, index) => (
               <Text
                 key={e}
-                style={imgActive == index ? styles.dotActive : styles.dot}>
+                style={imgActive == index ? styles.dotActive : styles.dot}
+              >
                 ●
               </Text>
             ))}
@@ -120,11 +108,12 @@ const HomeScreen = () => {
 
         {/* BEST SELLERS SECTION */}
         <View style={styles.bestSellersContainer}>
-          <Text style={styles.bestSellersTitle}>Best Sellers (maybe remove this)</Text>
+          <Text style={styles.bestSellersTitle}>Best Sellers</Text>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
-            style={styles.bestSellersScrollView}>
+            style={styles.bestSellersScrollView}
+          >
             {bestSellers.map((item, index) => (
               <View key={index} style={styles.bestSellersItem}>
                 <Image source={item.image} style={styles.bestSellersImage} />
@@ -133,8 +122,8 @@ const HomeScreen = () => {
             ))}
           </ScrollView>
         </View>
-      </SafeAreaView>
-    </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
