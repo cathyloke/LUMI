@@ -7,7 +7,7 @@ import {
   Image,
   TouchableOpacity,
 } from 'react-native';
-import { styles } from '../modules/style';
+import { styles } from '../modules/homeStyle';
 
 const images = [
   require('../img/promo/yves.jpg'),
