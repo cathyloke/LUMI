@@ -27,6 +27,7 @@ const HomeScreen = () => {
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
       const hours = new Date().getHours();
+      console.log(`Current hour: ${hours}`); // Checking purposes
       if (hours < 12) return 'Good Morning';
       if (hours < 18) return 'Good Afternoon';
       return 'Good Evening';
@@ -34,6 +35,19 @@ const HomeScreen = () => {
 
     setGreeting(getTimeOfDayGreeting());
   }, []);
+
+  const getCurrentHour = new Date().getHours();
+  
+  let hello;
+
+  if (getCurrentHour >= 5 && getCurrentHour < 12) {
+    hello = 'Good Morning';
+  } else if (getCurrentHour >= 12 && getCurrentHour < 18) {
+    hello = 'Good Afternoon';
+  } else {
+    hello = 'Good Evening';
+  }
+
 
   const onchange = nativeEvent => {
     if (nativeEvent) {

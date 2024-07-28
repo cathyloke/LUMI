@@ -35,13 +35,17 @@ export const styles = StyleSheet.create({
   buttonContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
+    alignItems: 'center',
     marginTop: 20,
-    height: 50,
+    height: 75,
   },
   button: {
     backgroundColor: '#007AFF',
+    justifyContent: 'center',
     padding: 10,
-    borderRadius: 5,
+    borderRadius: 20,
+    height: 75,
+    width: 100,
   },
   buttonText: {
     fontFamily: 'Gantari-Regular',
@@ -53,16 +57,15 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'lightpink', // For checking purposes
     height: 35,
   },
   greetingText: {
     fontSize: 18,
     color: '#333',
+    fontWeight: 'bold',
   },
   bestSellersContainer: {
     marginTop: 15,
-    backgroundColor: 'lightblue', // For checking purposes
     height: 190,
     padding: 10,
   },
