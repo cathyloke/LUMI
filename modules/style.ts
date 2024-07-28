@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor: '#FFFAFA',
   },
   scrollViewContent: {
     paddingBottom: 20, // Add padding to the bottom to ensure all content is visible
@@ -43,7 +44,7 @@ export const styles = StyleSheet.create({
     height: 80,
   },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#6D4C41',
     justifyContent: 'center',
     padding: 10,
     borderRadius: 20,
@@ -52,7 +53,7 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     fontFamily: 'Gantari-Regular',
-    color: '#FFF',
+    color: '#EFEBE9',
     fontSize: 20,
     textAlign: 'center',
   },
