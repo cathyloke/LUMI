@@ -92,6 +92,17 @@ const HomeScreen = () => {
           </View>
         </View>
 
+        {/* GREETING MESSAGE */}
+        <View style={styles.greetingContainer}>
+          <Text style={styles.greetingText}>
+            {greeting}, Dummy! {/* replace dummy with {username} */}
+          </Text>
+
+          <Text style={styles.readyText}>
+            Ready to order?
+          </Text>
+        </View>
+
         {/* FOR DELIVERY, PICKUP, MERCH BUTTONS */}
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button}>
@@ -105,13 +116,6 @@ const HomeScreen = () => {
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>Merch</Text>
           </TouchableOpacity>
-        </View>
-
-        {/* GREETING MESSAGE */}
-        <View style={styles.greetingContainer}>
-          <Text style={styles.greetingText}>
-            {greeting}, Dummy! {/* replace dummy with {username} */}
-          </Text>
         </View>
 
         {/* BEST SELLERS SECTION */}

@@ -36,15 +36,15 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: 20,
-    height: 75,
+    marginTop: 40,
+    height: 80,
   },
   button: {
     backgroundColor: '#007AFF',
     justifyContent: 'center',
     padding: 10,
     borderRadius: 20,
-    height: 75,
+    height: 80,
     width: 100,
   },
   buttonText: {
@@ -92,4 +92,9 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  readyText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 10,
+  }
 });
