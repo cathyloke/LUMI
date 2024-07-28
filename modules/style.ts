@@ -16,7 +16,7 @@ export const styles = StyleSheet.create({
   },
   wrap: {
     width: WIDTH,
-    height: HEIGHT * 0.25,
+    height: HEIGHT * 0.4,
   },
   wrapDot: {
     position: 'absolute',
@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: 40,
+    marginTop: 30,
     height: 80,
   },
   button: {
@@ -57,7 +57,7 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 35,
+    height: 65,
   },
   greetingText: {
     fontSize: 18,

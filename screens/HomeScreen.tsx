@@ -120,7 +120,7 @@ const HomeScreen = () => {
 
         {/* BEST SELLERS SECTION */}
         <View style={styles.bestSellersContainer}>
-          <Text style={styles.bestSellersTitle}>Best Sellers</Text>
+          <Text style={styles.bestSellersTitle}>Best Sellers (maybe remove this)</Text>
           <ScrollView
             horizontal
             showsHorizontalScrollIndicator={false}
