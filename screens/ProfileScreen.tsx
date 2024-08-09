@@ -116,7 +116,11 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
 
 const ProfileScreen = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen
         name="ProfileDetailsScreen"
         component={ProfileDetailsScreen}
