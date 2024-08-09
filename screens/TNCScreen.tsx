@@ -1,12 +1,12 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { styles } from '../modules/homeStyle';
+import { styles } from '../modules/generalStyle';
 
 const TNCScreen = () => {
    return (
       <View>
          <View>
-            <Text style={styles.font}>Terms and Conditions</Text>
+            <Text style={styles.header}>Terms & Conditions</Text>
          </View>
       </View>
    );
