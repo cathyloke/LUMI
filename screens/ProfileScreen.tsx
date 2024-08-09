@@ -11,11 +11,15 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { styles } from '../modules/profileStyle';
+
 import OrderHistoryScreen from './OrderHistoryScreen';
+import HelpCentreScreen from './HelpCentreScreen';
+import FeedbackScreen from './FeedbackScreen';
+import TNCScreen from './TNCScreen';
 
 const Stack = createStackNavigator();
 
-const ProfileScreen = ({route, navigation}: any) => {
+const ProfileDetailsScreen = ({route, navigation}: any) => {
   const [username, setUsername] = useState('Alyssa');
   const [email, setEmail] = useState('alyssa@example.com');
   const [isEditing, setIsEditing] = useState(false);
@@ -95,6 +99,22 @@ const ProfileScreen = ({route, navigation}: any) => {
         </View>
       </ScrollView>
     </SafeAreaView>
+  );
+};
+
+const ProfileScreen = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="ProfileDetailsScreen"
+        component={ProfileDetailsScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} />
+      <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} />
+      <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} />
+      <Stack.Screen name="TNCScreen" component={TNCScreen} />
+    </Stack.Navigator>
   );
 };
 
