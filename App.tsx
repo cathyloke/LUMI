@@ -1,24 +1,19 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dimensions } from 'react-native';
-
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import RewardsScreen from './screens/RewardsScreen';
-import ProfileScreen from './screens/ProfileScreen';
+import ProfileStack from './screens/ProfileStack'; // Import ProfileStack instead of ProfileScreen
 
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 
 const Tab = createBottomTabNavigator();
 
 const App = () => {
-  
-  const windowHeight = Dimensions.get('window').height;
-  
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -33,48 +28,43 @@ const App = () => {
           tabBarLabelStyle: {
             fontSize: 12,
             fontWeight: 'bold',
-            fontFamily: 'Gantari-Regular',
-            marginBottom: 25,
           },
-          tabBarIconStyle: {
-            marginTop: 25,
-          }
         }}
       >
         <Tab.Screen 
           name="Home" 
-          component={HomeScreen}
+          component={HomeScreen} 
           options={{
-            tabBarIcon: (({ focused }: any) => (
-              <Feather name="home" size={35} color={focused ? '#000' : '#999'} />
-            ))
+            tabBarIcon: ({ focused }) => (
+              <Feather name="home" size={30} color={focused ? '#000' : '#999'} />
+            ),
           }}  
         />
         <Tab.Screen 
           name="Menu" 
-          component={MenuScreen}
+          component={MenuScreen} 
           options={{
-            tabBarIcon: (({ focused }: any) => (
-              <MaterialIcons name="restaurant-menu" size={35} color={focused ? '#000' : '#999'} />
-            ))
+            tabBarIcon: ({ focused }) => (
+              <MaterialIcons name="restaurant-menu" size={30} color={focused ? '#000' : '#999'} />
+            ),
           }}
         />
         <Tab.Screen 
           name="Rewards" 
-          component={RewardsScreen}
+          component={RewardsScreen} 
           options={{
-            tabBarIcon: (({ focused }: any) => (
-              <MaterialCommunityIcons name="ticket-outline" size={35} color={focused ? '#000' : '#999'} />
-            ))
+            tabBarIcon: ({ focused }) => (
+              <MaterialCommunityIcons name="ticket-outline" size={30} color={focused ? '#000' : '#999'} />
+            ),
           }}
         />
         <Tab.Screen 
           name="Profile" 
-          component={ProfileScreen}
+          component={ProfileStack} // Use ProfileStack instead of ProfileScreen
           options={{
-            tabBarIcon: (({ focused }: any) => (
-              <Octicons name="person" size={35} color={focused ? '#000' : '#999'} />
-            ))
+            tabBarIcon: ({ focused }) => (
+              <Octicons name="person" size={30} color={focused ? '#000' : '#999'} />
+            ),
           }}
         />
       </Tab.Navigator>
