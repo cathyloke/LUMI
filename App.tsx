@@ -27,6 +27,8 @@ const App = () => {
           tabBarStyle: {
             backgroundColor: '#f5f5f5',
             height: windowHeight * 0.13,
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
           },
           tabBarActiveTintColor: '#000',
           tabBarInactiveTintColor: '#999',
@@ -38,7 +40,7 @@ const App = () => {
           },
           tabBarIconStyle: {
             marginTop: 25,
-          }
+          },
         }}
       >
         <Tab.Screen 
