@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Dimensions } from "react-native";
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import RewardsScreen from './screens/RewardsScreen';
@@ -14,6 +15,8 @@ import Octicons from 'react-native-vector-icons/Octicons';
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  const windowHeight = Dimensions.get('window').height;
+  
   return (
     <NavigationContainer>
       <Tab.Navigator
