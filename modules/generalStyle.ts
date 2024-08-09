@@ -9,5 +9,5 @@ export const styles = StyleSheet.create({
       textAlign: 'center',
       borderBottomColor: 'black',
       borderBottomWidth: 1,
-   }
-})
+   },
+});
