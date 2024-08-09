@@ -16,6 +16,7 @@ import OrderHistoryScreen from './OrderHistoryScreen';
 import HelpCentreScreen from './HelpCentreScreen';
 import FeedbackScreen from './FeedbackScreen';
 import TNCScreen from './TNCScreen';
+import AboutScreen from './'
 
 const Stack = createStackNavigator();
 
@@ -84,16 +85,28 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
           >
             <Text style={styles.optionText}>Order History</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.optionButton}>
+          <TouchableOpacity 
+            style={styles.optionButton}
+            onPress={() => navigation.navigate('HelpCentreScreen')}
+          >
             <Text style={styles.optionText}>Help Centre</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.optionButton}>
+          <TouchableOpacity 
+            style={styles.optionButton}
+            onPress={() => navigation.navigate('FeedbackScreen')}
+          >
             <Text style={styles.optionText}>Feedback</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.optionButton}>
+          <TouchableOpacity 
+            style={styles.optionButton}
+            onPress={() => navigation.navigate('TNCScreen')}
+          >
             <Text style={styles.optionText}>Terms and Conditions</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.optionButton}>
+          <TouchableOpacity 
+            style={styles.optionButton}
+            onPress={() => navigation.navigate('AboutScreen')}
+          >
             <Text style={styles.optionText}>About Lumiere</Text>
           </TouchableOpacity>
         </View>
