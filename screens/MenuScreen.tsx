@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { styles } from '../modules/style';
+import { styles } from '../modules/homeStyle';
 
 const MenuScreen = () => {
    return (

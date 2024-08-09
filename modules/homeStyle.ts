@@ -13,10 +13,14 @@ export const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
+    backgroundColor: '#FFFAFA',
+  },
+  scrollViewContent: {
+    paddingBottom: 20, // Add padding to the bottom to ensure all content is visible
   },
   wrap: {
     width: WIDTH,
-    height: HEIGHT * 0.25,
+    height: HEIGHT * 0.4,
   },
   wrapDot: {
     position: 'absolute',
@@ -36,20 +40,20 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    marginTop: 20,
-    height: 75,
+    marginTop: 30,
+    height: 80,
   },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#6D4C41',
     justifyContent: 'center',
     padding: 10,
     borderRadius: 20,
-    height: 75,
+    height: 80,
     width: 100,
   },
   buttonText: {
     fontFamily: 'Gantari-Regular',
-    color: '#FFF',
+    color: '#EFEBE9',
     fontSize: 20,
     textAlign: 'center',
   },
@@ -57,7 +61,7 @@ export const styles = StyleSheet.create({
     marginTop: 20,
     alignItems: 'center',
     justifyContent: 'center',
-    height: 35,
+    height: 65,
   },
   greetingText: {
     fontSize: 18,
@@ -92,4 +96,9 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  readyText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 10,
+  }
 });
