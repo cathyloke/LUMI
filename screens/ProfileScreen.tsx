@@ -8,9 +8,14 @@ import {
   TouchableOpacity,
   TextInput,
 } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { styles } from '../modules/profileStyle';
+import OrderHistoryScreen from './OrderHistoryScreen';
 
-const ProfileScreen = () => {
+const Stack = createStackNavigator();
+
+const ProfileScreen = ({route, navigation}: any) => {
   const [username, setUsername] = useState('Alyssa');
   const [email, setEmail] = useState('alyssa@example.com');
   const [isEditing, setIsEditing] = useState(false);
@@ -28,6 +33,7 @@ const ProfileScreen = () => {
   return (
     <SafeAreaView style={styles.container}>
       <ScrollView contentContainerStyle={styles.scrollViewContent}>
+        {/* FOR USER PROFILE */}
         <View style={styles.profileContainer}>
           <Image
             source={require('../img/profile-placeholder.jpeg')}
@@ -68,7 +74,10 @@ const ProfileScreen = () => {
         </View>
 
         <View style={styles.optionsContainer}>
-          <TouchableOpacity style={styles.optionButton}>
+          <TouchableOpacity 
+            style={styles.optionButton}
+            onPress={() => navigation.navigate('OrderHistoryScreen')}
+          >
             <Text style={styles.optionText}>Order History</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.optionButton}>
