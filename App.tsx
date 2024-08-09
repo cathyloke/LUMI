@@ -26,15 +26,19 @@ const App = () => {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: '#f5f5f5',
-            height: windowHeight * .15,
+            height: windowHeight * 0.15,
           },
           tabBarActiveTintColor: '#000',
           tabBarInactiveTintColor: '#999',
           tabBarLabelStyle: {
-            fontSize: 12,
+            fontSize: 14,
             fontWeight: 'bold',
             fontFamily: 'Gantari-Regular',
+            marginBottom: 25,
           },
+          tabBarIconStyle: {
+            marginTop: 25,
+          }
         }}
       >
         <Tab.Screen 
