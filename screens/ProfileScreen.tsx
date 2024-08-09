@@ -16,7 +16,7 @@ import OrderHistoryScreen from './OrderHistoryScreen';
 import HelpCentreScreen from './HelpCentreScreen';
 import FeedbackScreen from './FeedbackScreen';
 import TNCScreen from './TNCScreen';
-import AboutScreen from './'
+import AboutScreen from './AboutScreen';
 
 const Stack = createStackNavigator();
 
@@ -127,6 +127,7 @@ const ProfileScreen = () => {
       <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} />
       <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} />
       <Stack.Screen name="TNCScreen" component={TNCScreen} />
+      <Stack.Screen name="AboutScreen" component={AboutScreen} />
     </Stack.Navigator>
   );
 };
