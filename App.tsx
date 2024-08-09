@@ -21,12 +21,12 @@ const App = () => {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: '#f5f5f5',
-            height: 60,
+            height: windowHeight * 0.13,
           },
           tabBarActiveTintColor: '#000',
           tabBarInactiveTintColor: '#999',
           tabBarLabelStyle: {
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: 'bold',
           },
         }}
