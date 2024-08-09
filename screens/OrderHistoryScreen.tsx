@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from '../modules/homeStyle';
 
-const MenuScreen = () => {
+const OrderHistoryScreen = () => {
    return (
       <View>
          <View>
@@ -12,4 +12,4 @@ const MenuScreen = () => {
    );
 };
 
-export default MenuScreen;
+export default OrderHistoryScreen;

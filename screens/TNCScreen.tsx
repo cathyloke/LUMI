@@ -2,14 +2,14 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import { styles } from '../modules/homeStyle';
 
-const HelpCentreScreen = () => {
+const TNCScreen = () => {
    return (
       <View>
          <View>
-            <Text style={styles.font}>Help Centre</Text>
+            <Text style={styles.font}>Terms and Conditions</Text>
          </View>
       </View>
    );
 };
 
-export default HelpCentreScreen;
+export default TNCScreen;
