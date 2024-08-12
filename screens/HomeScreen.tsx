@@ -84,7 +84,7 @@ const HomeScreen = () => {
         {/* GREETING MESSAGE */}
         <View style={styles.greetingContainer}>
           <Text style={styles.greetingText}>
-            {greeting}, Dummy! {/* replace dummy with {username} */}
+            {greeting}, (username)! {/* replace with {username} */}
           </Text>
 
           <Text style={styles.readyText}>
