@@ -100,13 +100,13 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
             style={styles.optionButton}
             onPress={() => navigation.navigate('TNCScreen')}
           >
-            <Text style={styles.optionText}>Terms and Conditions</Text>
+            <Text style={styles.optionText}>Terms & Conditions</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.optionButton}
             onPress={() => navigation.navigate('AboutScreen')}
           >
-            <Text style={styles.optionText}>About Lumiere</Text>
+            <Text style={styles.optionText}>About Lumière</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

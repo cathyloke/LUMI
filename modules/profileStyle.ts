@@ -52,7 +52,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     padding: 15,
     backgroundColor: '#FFAB91', // Caramel
-    borderRadius: 5,
+    borderRadius: 50,
     alignItems: 'center',
     marginTop: 10,
   },
@@ -72,7 +72,7 @@ export const styles = StyleSheet.create({
     width: '100%',
     padding: 15,
     backgroundColor: '#EFEBE9', // Cappuccino Cream
-    borderRadius: 5,
+    borderRadius: 50,
     alignItems: 'center',
     marginBottom: 10,
   },
