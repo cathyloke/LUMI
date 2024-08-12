@@ -83,7 +83,7 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
             style={styles.optionButton}
             onPress={() => navigation.navigate('OrderHistoryScreen')}
           >
-            <Text style={styles.optionText}>Order History</Text>
+            <Text style={styles.optionText}>My Orders</Text>
           </TouchableOpacity>
           <TouchableOpacity 
             style={styles.optionButton}
