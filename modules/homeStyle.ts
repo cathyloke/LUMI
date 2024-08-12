@@ -4,13 +4,6 @@ const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
 export const styles = StyleSheet.create({
-  font: {
-    fontFamily: 'Gantari-Regular',
-    color: 'blue',
-    textAlign: 'center',
-    fontSize: 30,
-    fontWeight: 'bold',
-  },
   container: {
     flex: 1,
     backgroundColor: '#FFFAFA',
@@ -64,6 +57,7 @@ export const styles = StyleSheet.create({
     height: 65,
   },
   greetingText: {
+    fontFamily: 'Gantari-Regular',
     fontSize: 18,
     color: '#333',
     fontWeight: 'bold',
@@ -74,6 +68,7 @@ export const styles = StyleSheet.create({
     padding: 10,
   },
   bestSellersTitle: {
+    fontFamily: 'Gantari-Bold',
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
@@ -93,6 +88,7 @@ export const styles = StyleSheet.create({
   },
   bestSellersText: {
     marginTop: 5,
+    fontFamily: 'Gantari-Regular',
     fontSize: 16,
     textAlign: 'center',
   },

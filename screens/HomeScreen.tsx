@@ -10,14 +10,17 @@ import {
 import { styles } from '../modules/homeStyle';
 
 const images = [
-  require('../img/promo/yves.jpg'),
-  require('../img/promo/chuu.jpg'),
+  require('../img/promo/PromoCroissant.png'),
+  require('../img/promo/PromoCoffee.png'),
+  require('../img/promo/PromoPancake.png'),
 ];
 
 const bestSellers = [
-  { title: 'Tiramisu cake', image: require('../img/food/tiramisu-cake.jpeg') },
-  { title: 'Chocolate cake', image: require('../img/food/chocolate-cake.jpg') },
-  { title: 'Matcha cake', image: require('../img/food/matcha-cake.jpeg') },
+  { title: 'Egg Croissant Sandwich', image: require('../img/food/FoodEggCroissantSandwich.png') },
+  { title: 'Avocado Toast', image: require('../img/food/FoodAvocadoToast.png') },
+  { title: 'Matcha Latte', image: require('../img/drinks/DrinksMatchaLatte.jpeg') },
+  { title: 'Berry Pancakes', image: require('../img/food/FoodBerryPancakes.png') },
+  { title: 'New York Cheesecake', image: require('../img/food/FoodNewYorkCheesecake.jpeg') },
 ];
 
 const HomeScreen = () => {
@@ -27,8 +30,8 @@ const HomeScreen = () => {
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
       const hours = new Date().getHours();
-      if (hours < 12) return 'Good Morning';
-      if (hours < 18) return 'Good Afternoon';
+      if (hours < 12) {return 'Good Morning';}
+      if (hours < 18) {return 'Good Afternoon';}
       return 'Good Evening';
     };
 
@@ -83,7 +86,7 @@ const HomeScreen = () => {
         {/* GREETING MESSAGE */}
         <View style={styles.greetingContainer}>
           <Text style={styles.greetingText}>
-            {greeting}, Dummy! {/* replace dummy with {username} */}
+            {greeting}, (username)! {/* replace with {username} */}
           </Text>
 
           <Text style={styles.readyText}>

@@ -30,14 +30,17 @@ export const styles = StyleSheet.create({
     marginBottom: 15,
   },
   label: {
+    fontFamily: 'Gantari-Regular',
     fontSize: 18,
     color: '#3E2723', // Dark Chocolate
   },
   value: {
+    fontFamily: 'Gantari-Regular',
     fontSize: 18,
     color: '#6D4C41', // Mocha
   },
   input: {
+    fontFamily: 'Gantari-Regular',
     borderBottomWidth: 1,
     borderBottomColor: '#6D4C41', // Mocha
     fontSize: 18,
@@ -54,6 +57,7 @@ export const styles = StyleSheet.create({
     marginTop: 10,
   },
   buttonText: {
+    fontFamily: 'Gantari-Regular',
     fontSize: 18,
     color: '#3E2723', // Dark Chocolate
   },
@@ -73,6 +77,7 @@ export const styles = StyleSheet.create({
     marginBottom: 10,
   },
   optionText: {
+    fontFamily: 'Gantari-Regular',
     fontSize: 18,
     color: '#3E2723', // Dark Chocolate
   },
