@@ -11,8 +11,8 @@ import { styles } from '../modules/homeStyle';
 
 const images = [
   require('../img/promo/PromoCroissant.png'),
-  require('../img/promo/PromoCoffee.png'),
   require('../img/promo/PromoPancake.png'),
+  require('../img/promo/PromoCoffee.png'),
 ];
 
 const bestSellers = [
