@@ -20,7 +20,7 @@ const bestSellers = [
   { title: 'Avocado Toast', image: require('../img/food/FoodAvocadoToast.png') },
   { title: 'Matcha Latte', image: require('../img/drinks/DrinksMatchaLatte.jpeg') },
   { title: 'Berry Pancakes', image: require('../img/food/FoodBerryPancakes.png') },
-  { title: 'New York Cheesecake', image: require('../img/food/FoodNewYorkCheesecake.png') },
+  { title: 'New York Cheesecake', image: require('../img/food/FoodNewYorkCheesecake.jpeg') },
 ];
 
 const HomeScreen = () => {
