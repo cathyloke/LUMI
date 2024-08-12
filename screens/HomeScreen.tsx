@@ -10,8 +10,9 @@ import {
 import { styles } from '../modules/homeStyle';
 
 const images = [
-  require('../img/promo/yves.jpg'),
-  require('../img/promo/chuu.jpg'),
+  require('../img/promo/PromoCroissant.png'),
+  require('../img/promo/PromoCoffee.png'),
+  require('../img/promo/PromoPancake.png'),
 ];
 
 const bestSellers = [
@@ -27,8 +28,8 @@ const HomeScreen = () => {
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
       const hours = new Date().getHours();
-      if (hours < 12) return 'Good Morning';
-      if (hours < 18) return 'Good Afternoon';
+      if (hours < 12) {return 'Good Morning';}
+      if (hours < 18) {return 'Good Afternoon';}
       return 'Good Evening';
     };
 
