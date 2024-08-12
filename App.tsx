@@ -16,9 +16,9 @@ import Octicons from 'react-native-vector-icons/Octicons';
 const Tab = createBottomTabNavigator();
 
 const App = () => {
-  
+
   const windowHeight = Dimensions.get('window').height;
-  
+
   return (
     <NavigationContainer>
       <Tab.Navigator
@@ -50,7 +50,7 @@ const App = () => {
             tabBarIcon: (({ focused }: any) => (
               <Feather name="home" size={35} color={focused ? '#000' : '#999'} />
             ))
-          }}  
+          }}
         />
         <Tab.Screen 
           name="Menu" 
