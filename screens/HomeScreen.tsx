@@ -16,9 +16,11 @@ const images = [
 ];
 
 const bestSellers = [
-  { title: 'Tiramisu cake', image: require('../img/food/tiramisu-cake.jpeg') },
-  { title: 'Chocolate cake', image: require('../img/food/chocolate-cake.jpg') },
-  { title: 'Matcha cake', image: require('../img/food/matcha-cake.jpeg') },
+  { title: 'Egg Croissant Sandwich', image: require('../img/food/FoodEggCroissantSandwich.png') },
+  { title: 'Avocado Toast', image: require('../img/food/FoodAvocadoToast.png') },
+  { title: 'Matcha Latte', image: require('../img/drinks/DrinksMatchaLatte.jpeg') },
+  { title: 'Berry Pancakes', image: require('../img/food/FoodBerryPancakes.png') },
+  { title: 'New York Cheesecake', image: require('../img/food/FoodNewYorkCheesecake.png') },
 ];
 
 const HomeScreen = () => {
