@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { styles } from '../modules/profileStyle';
+import { generalStyles } from '../modules/generalStyle';
 
 import OrderHistoryScreen from './OrderHistoryScreen';
 import HelpCentreScreen from './HelpCentreScreen';
@@ -118,7 +119,7 @@ const ProfileScreen = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-        headerShown: false,
+        headerTitleStyle: generalStyles.header,
       }}
     >
       <Stack.Screen
@@ -126,11 +127,11 @@ const ProfileScreen = () => {
         component={ProfileDetailsScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} />
-      <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} />
-      <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} />
-      <Stack.Screen name="TNCScreen" component={TNCScreen} />
-      <Stack.Screen name="AboutScreen" component={AboutScreen} />
+      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'Order History'}}/>
+      <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} options={{title: 'Help Centre'}}/>
+      <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} options={{title: 'Feedback'}}/>
+      <Stack.Screen name="TNCScreen" component={TNCScreen} options={{title: 'Terms & Conditions'}}/>
+      <Stack.Screen name="AboutScreen" component={AboutScreen} options={{title: 'About Lumière'}}/>
     </Stack.Navigator>
   );
 };

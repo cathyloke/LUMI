@@ -1,13 +1,11 @@
 import { StyleSheet } from 'react-native';
 
-export const styles = StyleSheet.create({
+export const generalStyles = StyleSheet.create({
    header: {
       fontFamily: 'Gantari-Bold',
-      fontSize: 25,
+      fontSize: 20,
       color: 'black',
       padding: 15,
       textAlign: 'center',
-      borderBottomColor: 'black',
-      borderBottomWidth: 1,
    },
 });
