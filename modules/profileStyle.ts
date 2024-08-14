@@ -83,15 +83,15 @@ export const styles = StyleSheet.create({
   },
 
   title:{
-    fontFamily: 'Gantari-Regular',
+    fontFamily: 'Gantari-Bold',
     fontSize: 28,
     textAlign: 'center',
     color: '#102C57',
     marginTop: 20,
-    fontWeight: 'bold'
   },
 
   subtitle:{
+    fontFamily: 'Gantari-Bold',
     marginTop:10,
     marginBottom:30,
     color:'#000000',
@@ -99,6 +99,7 @@ export const styles = StyleSheet.create({
   },
 
   box: {
+    fontFamily: 'Gantari-Bold',
     width: 100,
     height: 50,
     backgroundColor: '#ddd',
@@ -109,14 +110,17 @@ export const styles = StyleSheet.create({
   },
 
   selectedBox: {
-      backgroundColor: '#102C57',
+    fontFamily: 'Gantari-Bold',
+    backgroundColor: '#102C57',
   },
 
   text: {
-      color: '#000',
+    fontFamily: 'Gantari-Bold',
+    color: '#000',
   },
 
   selectedText: {
+    fontFamily: 'Gantari-Bold',
     color: '#F8F0E5',
  },
 
@@ -124,9 +128,11 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginVertical: 3,
+    margin: 30,
   },
 
   comments:{
+    fontFamily: 'Gantari-Bold',
     marginTop:20,
     color:'#000000',
     textAlign: 'left',
@@ -134,6 +140,7 @@ export const styles = StyleSheet.create({
   },
 
   inputs:{
+    fontFamily: 'Gantari-Bold',
     height: 150,
     margin: 14,
     borderWidth: 1,

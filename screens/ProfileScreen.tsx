@@ -17,6 +17,7 @@ import HelpCentreScreen from './HelpCentreScreen';
 import FeedbackScreen from './FeedbackScreen';
 import TNCScreen from './TNCScreen';
 import AboutScreen from './AboutScreen';
+import LogInScreen from './LogInScreen';
 
 const Stack = createStackNavigator();
 
@@ -81,7 +82,7 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
         <View style={styles.optionsContainer}>
           <TouchableOpacity 
             style={styles.optionButton}
-            onPress={() => navigation.navigate('OrderHistoryScreen')}
+            onPress={() => navigation.navigate('LogInScreen')}
           >
             <Text style={styles.optionText}>My Orders</Text>
           </TouchableOpacity>
@@ -127,7 +128,7 @@ const ProfileScreen = () => {
         component={ProfileDetailsScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'My Orders'}}/>
+      <Stack.Screen name="LogInScreen" component={LogInScreen} options={{title: 'LogInScreen'}}/>
       <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} options={{title: 'Help Centre'}}/>
       <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} options={{title: 'Feedback'}}/>
       <Stack.Screen name="TNCScreen" component={TNCScreen} options={{title: 'Terms & Conditions'}}/>
