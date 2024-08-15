@@ -6,7 +6,7 @@ const HEIGHT = Dimensions.get('window').height;
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFAFA',
+    backgroundColor: '#F8F0E5',
   },
   scrollViewContent: {
     paddingBottom: 20, // Add padding to the bottom to ensure all content is visible
