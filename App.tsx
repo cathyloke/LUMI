@@ -10,7 +10,7 @@ import ProfileScreen from './screens/ProfileScreen';
 
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
 
 const Tab = createBottomTabNavigator();
@@ -36,10 +36,10 @@ const App = () => {
             fontSize: 12,
             fontWeight: 'bold',
             fontFamily: 'Gantari-Regular',
-            marginBottom: 25,
+            marginBottom: 20,
           },
           tabBarIconStyle: {
-            marginTop: 25,
+            marginTop: 20,
           },
         }}
       >
