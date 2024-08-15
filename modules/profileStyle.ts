@@ -149,12 +149,12 @@ export const styles = StyleSheet.create({
   },
 
   subbutton: {
-    backgroundColor: '#102C57',  
+    backgroundColor: '#102C57',
     paddingVertical: 10,
-    paddingHorizontal: 30,  
-    borderRadius: 20, 
+    paddingHorizontal: 30,
+    borderRadius: 20,
     alignItems: 'center',
-    alignSelf: 'center', 
+    alignSelf: 'center',
     width: 200,
   },
 });
