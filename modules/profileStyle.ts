@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#D7CCC8', // Latte Beige
+    backgroundColor: '#F8F0E5',
   },
   scrollViewContent: {
     alignItems: 'center',
@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   profileContainer: {
     width: '90%',
     padding: 20,
-    backgroundColor: '#EFEBE9', // Cappuccino Cream
+    backgroundColor: '#EADBC8',
     borderRadius: 10,
     alignItems: 'center',
   },
@@ -32,19 +32,19 @@ export const styles = StyleSheet.create({
   label: {
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
-    color: '#3E2723', // Dark Chocolate
+    color: '#102C57',
   },
   value: {
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
-    color: '#6D4C41', // Mocha
+    color: '#102C57',
   },
   input: {
     fontFamily: 'Gantari-Regular',
     borderBottomWidth: 1,
-    borderBottomColor: '#6D4C41', // Mocha
+    borderBottomColor: '#102C57',
     fontSize: 18,
-    color: '#3E2723', // Dark Chocolate
+    color: '#102C57',
     width: '60%',
     textAlign: 'right',
   },
@@ -59,7 +59,7 @@ export const styles = StyleSheet.create({
   buttonText: {
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
-    color: '#3E2723', // Dark Chocolate
+    color: '#102C57', // Dark Chocolate
   },
   logoutButton: {
     backgroundColor: '#E57373', // Red accent for logout
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
   optionButton: {
     width: '100%',
     padding: 15,
-    backgroundColor: '#EFEBE9', // Cappuccino Cream
+    backgroundColor: '#EADBC8', // Cappuccino Cream
     borderRadius: 50,
     alignItems: 'center',
     marginBottom: 10,
@@ -79,7 +79,7 @@ export const styles = StyleSheet.create({
   optionText: {
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
-    color: '#3E2723', // Dark Chocolate
+    color: '#102C57',
   },
 
   title:{
@@ -95,7 +95,7 @@ export const styles = StyleSheet.create({
     marginTop:10,
     marginBottom:30,
     color:'#000000',
-    textAlign:'center'
+    textAlign:'center',
   },
 
   box: {
