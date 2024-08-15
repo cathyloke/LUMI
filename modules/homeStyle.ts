@@ -23,11 +23,11 @@ export const styles = StyleSheet.create({
   },
   dotActive: {
     margin: 3,
-    color: 'grey',
+    color: '#102C57',
   },
   dot: {
     margin: 3,
-    color: 'white',
+    color: '#92b0de',
   },
   buttonContainer: {
     flexDirection: 'row',
@@ -37,7 +37,7 @@ export const styles = StyleSheet.create({
     height: 80,
   },
   button: {
-    backgroundColor: '#6D4C41',
+    backgroundColor: '#102C57',
     justifyContent: 'center',
     padding: 10,
     borderRadius: 20,
@@ -95,6 +95,8 @@ export const styles = StyleSheet.create({
   readyText: {
     fontSize: 20,
     fontWeight: 'bold',
+    fontFamily: 'Gantari-Regular',
     marginTop: 10,
-  }
+    color: '#333',
+  },
 });
