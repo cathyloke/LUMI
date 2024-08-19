@@ -14,7 +14,7 @@ const CustomDrawer = (props: any) => {
             source={{ uri: 'https://via.placeholder.com/100' }} // Replace with your profile image URL
             style={styles.profileImage}
          />
-         <Text style={styles.profileName}>John Doe</Text>
+         <Text style={styles.profileName}>(username)</Text>
          <TouchableOpacity style={styles.editProfileButton} onPress={() => navigation.navigate('Profile')}>
             <Text style={styles.editProfileText}>Edit Profile</Text>
          </TouchableOpacity>
