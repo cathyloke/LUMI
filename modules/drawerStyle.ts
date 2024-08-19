@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const drawerStyles = StyleSheet.create({
   header: {
-    flex: 0.15,
+    flex: 0.2,
     backgroundColor: '#FFAD60',
     justifyContent: 'flex-end',
     alignItems: 'center',
