@@ -155,13 +155,17 @@ function DrawerScreenWithTabs({ component: Component, title }: any) {
 // Drawer Navigator
 function AppDrawerStack() {
   return (
-    <DrawerStack.Navigator initialRouteName="Home" drawerContent={(props: any) => <CustomDrawer {...props} />}>
+    <DrawerStack.Navigator
+      initialRouteName="Home"
+      drawerContent={(props: any) => <CustomDrawer {...props} />}
+    >
       <DrawerStack.Screen name="Home" component={AppBottomStack} />
       <DrawerStack.Screen name="About Lumière" component={AboutLumiereScreen} />
       <DrawerStack.Screen name="My Orders" component={MyOrdersScreen} />
       <DrawerStack.Screen name="Help Centre" component={HelpCentreScreenWithTabs} />
       <DrawerStack.Screen name="Feedback" component={FeedbackScreenWithTabs} />
       <DrawerStack.Screen name="Terms & Conditions" component={TNCScreenWithTabs} />
+      <DrawerStack.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
     </DrawerStack.Navigator>
   );
 }
