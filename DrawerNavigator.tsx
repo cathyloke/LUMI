@@ -7,6 +7,7 @@ import RewardsScreen from './screens/RewardsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import { View, Text, TouchableNativeFeedback, Image, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import drawerStyles from './modules/drawerStyle';
 
 const Drawer = createDrawerNavigator();
 
