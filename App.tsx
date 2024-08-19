@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator, DrawerItemList } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dimensions } from 'react-native';
+import { Dimensions, View, Text, TouchableNativeFeedback } from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
@@ -19,6 +19,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Octicons from 'react-native-vector-icons/Octicons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const windowHeight = Dimensions.get('window').height;
 
@@ -51,8 +52,8 @@ function AppBottomStack() {
         },
       }}
     >
-      <BottomStack.Screen 
-        name="HomeTab" 
+      <BottomStack.Screen
+        name="Home"
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused }: any) => (
@@ -60,8 +61,8 @@ function AppBottomStack() {
           ),
         }}
       />
-      <BottomStack.Screen 
-        name="Menu" 
+      <BottomStack.Screen
+        name="Menu"
         component={MenuScreen}
         options={{
           tabBarIcon: ({ focused }: any) => (
@@ -69,8 +70,8 @@ function AppBottomStack() {
           ),
         }}
       />
-      <BottomStack.Screen 
-        name="Rewards" 
+      <BottomStack.Screen
+        name="Rewards"
         component={RewardsScreen}
         options={{
           tabBarIcon: ({ focused }: any) => (
@@ -78,8 +79,8 @@ function AppBottomStack() {
           ),
         }}
       />
-      <BottomStack.Screen 
-        name="Profile" 
+      <BottomStack.Screen
+        name="Profile"
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ focused }: any) => (
@@ -91,10 +92,33 @@ function AppBottomStack() {
   );
 }
 
+const CustomDrawer = (props: any) => {
+  return (
+    <View style={{flex: 1}}>
+      <View style={{flex: .15, backgroundColor: '#FFAD60', justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 15}}>
+        <Ionicons name='logo-reddit' size={60} color='white'/>
+        <Text style={{color: 'white', fontSize: 15}}>My Profile Pic</Text>
+      </View>
+      <View style={{flex: .75}}>
+        <DrawerItemList {...props} />
+      </View>
+      <View style={{flex: .1, paddingLeft: 15, paddingTop: 5, borderTopWidth: 1}}>
+        <TouchableNativeFeedback>
+          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+            <Ionicons name='log-out-sharp' size={40} />
+            <Text style={{fontSize: 15}}>Logout</Text>
+          </View>
+        </TouchableNativeFeedback>
+      </View>
+    </View>
+
+  );
+};
+
 // Drawer Navigator
 function AppDrawerStack() {
   return (
-    <DrawerStack.Navigator initialRouteName="Home">
+    <DrawerStack.Navigator initialRouteName="Home" drawerContent={(props: any) => <CustomDrawer {...props} />}>
       <DrawerStack.Screen name="Home" component={AppBottomStack} />
       <DrawerStack.Screen name="About Lumière" component={AboutScreen} />
       <DrawerStack.Screen name="My Orders" component={OrderHistoryScreen} />
