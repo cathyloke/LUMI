@@ -35,7 +35,8 @@ const drawerStyles = StyleSheet.create({
     alignItems: 'center',
   },
   logoutText: {
-    fontSize: 15,
+    fontSize: 14,
+    fontFamily: 'Gantari-Regular',
   },
 });
 
