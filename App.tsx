@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerItemList } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dimensions, View, Text, TouchableNativeFeedback, TouchableOpacity } from 'react-native';
+import { Dimensions, View, Text, TouchableNativeFeedback, TouchableOpacity, Image } from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
@@ -14,6 +14,7 @@ import HelpCentreScreen from './screens/HelpCentreScreen';
 import FeedbackScreen from './screens/FeedbackScreen';
 import TNCScreen from './screens/TNCScreen';
 import AboutScreen from './screens/AboutScreen';
+import drawerStyles from './modules/drawerStyle';
 
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -92,20 +93,27 @@ function AppBottomStack() {
 }
 
 const CustomDrawer = (props: any) => {
+  const { navigation } = props;
+
   return (
     <View style={{ flex: 1 }}>
-      <View style={{ flex: 0.15, backgroundColor: '#FFAD60', justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 15 }}>
-        <Ionicons name='logo-reddit' size={60} color='white' />
-        <Text style={{ color: 'white', fontSize: 15 }}>(username)</Text>
+      <View style={drawerStyles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <Image 
+            source={{ uri: 'https://via.placeholder.com/100' }} // Placeholder image URL
+            style={drawerStyles.profileImage}
+          />
+        </TouchableOpacity>
+        <Text style={drawerStyles.username}>(username)</Text>
       </View>
-      <View style={{ flex: 0.75 }}>
+      <View style={drawerStyles.drawerItems}>
         <DrawerItemList {...props} />
       </View>
-      <View style={{ flex: 0.1, paddingLeft: 15, paddingTop: 5, borderTopWidth: 1 }}>
+      <View style={drawerStyles.logoutContainer}>
         <TouchableNativeFeedback>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+          <View style={drawerStyles.logout}>
             <Ionicons name='log-out-sharp' size={40} />
-            <Text style={{ fontSize: 15 }}>Logout</Text>
+            <Text style={drawerStyles.logoutText}>Logout</Text>
           </View>
         </TouchableNativeFeedback>
       </View>
