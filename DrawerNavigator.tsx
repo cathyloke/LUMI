@@ -1,4 +1,3 @@
-// DrawerNavigator.tsx
 import React from 'react';
 import { createDrawerNavigator, DrawerItemList } from '@react-navigation/drawer';
 import HomeScreen from './screens/HomeScreen';
