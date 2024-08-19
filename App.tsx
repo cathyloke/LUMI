@@ -43,7 +43,6 @@ function AppBottomStack() {
         tabBarInactiveTintColor: '#999',
         tabBarLabelStyle: {
           fontSize: 12,
-          fontWeight: 'bold',
           fontFamily: 'Gantari-Regular',
           marginBottom: 20,
         },
@@ -111,20 +110,29 @@ const CustomDrawer = (props: any) => {
         </TouchableNativeFeedback>
       </View>
     </View>
-
   );
 };
+
+// Integrating Bottom Tabs with Drawer Screens
+function DrawerScreenWithTabs({component: Component, title}: any) {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name={title} component={Component} />
+      <Stack.Screen name="AppBottomStack" component={AppBottomStack} />
+    </Stack.Navigator>
+  );
+}
 
 // Drawer Navigator
 function AppDrawerStack() {
   return (
     <DrawerStack.Navigator initialRouteName="Home" drawerContent={(props: any) => <CustomDrawer {...props} />}>
       <DrawerStack.Screen name="Home" component={AppBottomStack} />
-      <DrawerStack.Screen name="About Lumière" component={AboutScreen} />
-      <DrawerStack.Screen name="My Orders" component={OrderHistoryScreen} />
-      <DrawerStack.Screen name="Help Centre" component={HelpCentreScreen} />
-      <DrawerStack.Screen name="Feedback" component={FeedbackScreen} />
-      <DrawerStack.Screen name="Terms & Conditions" component={TNCScreen} />
+      <DrawerStack.Screen name="About Lumière" component={() => DrawerScreenWithTabs({component: AboutScreen, title: 'About Lumière'})} />
+      <DrawerStack.Screen name="My Orders" component={() => DrawerScreenWithTabs({component: OrderHistoryScreen, title: 'My Orders'})} />
+      <DrawerStack.Screen name="Help Centre" component={() => DrawerScreenWithTabs({component: HelpCentreScreen, title: 'Help Centre'})} />
+      <DrawerStack.Screen name="Feedback" component={() => DrawerScreenWithTabs({component: FeedbackScreen, title: 'Feedback'})} />
+      <DrawerStack.Screen name="Terms & Conditions" component={() => DrawerScreenWithTabs({component: TNCScreen, title: 'Terms & Conditions'})} />
     </DrawerStack.Navigator>
   );
 }
