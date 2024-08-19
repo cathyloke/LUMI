@@ -134,7 +134,7 @@ const HomeScreen = () => {
       {/* Floating Button for Drawer */}
       <TouchableOpacity 
         style={styles.floatingButton} 
-        onPress={() => navigation.toggleDrawer()}
+        onPress={() => navigation.openDrawer()}
       >
         <Feather name="menu" size={30} color="#fff" />
       </TouchableOpacity>
