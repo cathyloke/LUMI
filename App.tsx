@@ -35,15 +35,15 @@ const App = () => {
           tabBarLabelStyle: {
             fontSize: 12,
             fontFamily: 'Gantari-Regular',
-            marginBottom: 20,
+            marginBottom: 16,
           },
           tabBarIconStyle: {
-            marginTop: 20,
+            marginTop: 16,
           },
         }}
       >
         <Tab.Screen 
-          name="Home" 
+          name="Home"
           component={HomeScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
@@ -52,7 +52,7 @@ const App = () => {
           }}
         />
         <Tab.Screen 
-          name="Menu" 
+          name="Menu"
           component={MenuScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
@@ -61,7 +61,7 @@ const App = () => {
           }}
         />
         <Tab.Screen 
-          name="Rewards" 
+          name="Rewards"
           component={RewardsScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
@@ -70,7 +70,7 @@ const App = () => {
           }}
         />
         <Tab.Screen 
-          name="Profile" 
+          name="Profile"
           component={ProfileScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
