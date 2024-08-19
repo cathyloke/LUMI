@@ -96,4 +96,13 @@ export const styles = StyleSheet.create({
     marginTop: 10,
     color: '#333',
   },
+  floatingButton: {
+    position: 'absolute',
+    top: 30,
+    left: 20,
+    backgroundColor: '#102C57',
+    borderRadius: 30,
+    padding: 10,
+    elevation: 10,
+  },
 });

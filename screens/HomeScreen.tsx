@@ -6,7 +6,10 @@ import {
   Text,
   Image,
   TouchableOpacity,
+  StyleSheet,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import Feather from 'react-native-vector-icons/Feather';
 import { styles } from '../modules/homeStyle';
 
 const images = [
@@ -26,6 +29,7 @@ const bestSellers = [
 const HomeScreen = () => {
   const [imgActive, setImgActive] = useState(0);
   const [greeting, setGreeting] = useState('');
+  const navigation = useNavigation();
 
   useEffect(() => {
     const getTimeOfDayGreeting = () => {
@@ -43,7 +47,7 @@ const HomeScreen = () => {
       const slide = Math.ceil(
         nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width,
       );
-      if (slide != imgActive) {
+      if (slide !== imgActive) {
         setImgActive(slide);
       }
     }
@@ -75,7 +79,7 @@ const HomeScreen = () => {
             {images.map((e, index) => (
               <Text
                 key={e}
-                style={imgActive == index ? styles.dotActive : styles.dot}
+                style={imgActive === index ? styles.dotActive : styles.dot}
               >
                 ●
               </Text>
@@ -126,6 +130,14 @@ const HomeScreen = () => {
           </ScrollView>
         </View>
       </ScrollView>
+      
+      {/* Floating Button for Drawer */}
+      <TouchableOpacity 
+        style={styles.floatingButton} 
+        onPress={() => navigation.toggleDrawer()}
+      >
+        <Feather name="menu" size={30} color="#fff" />
+      </TouchableOpacity>
     </SafeAreaView>
   );
 };
