@@ -25,16 +25,15 @@ const App = () => {
         screenOptions={{
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: '#EADBC8',
-            height: windowHeight * 0.13,
-            borderTopLeftRadius: 35,
-            borderTopRightRadius: 35,
+            backgroundColor: '#F8F0E5',
+            height: windowHeight * 0.12,
+            borderTopLeftRadius: 30,
+            borderTopRightRadius: 30,
           },
           tabBarActiveTintColor: '#102C57',
           tabBarInactiveTintColor: '#999',
           tabBarLabelStyle: {
             fontSize: 12,
-            fontWeight: 'bold',
             fontFamily: 'Gantari-Regular',
             marginBottom: 20,
           },
