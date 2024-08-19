@@ -14,6 +14,13 @@ const DrawerNavigator = () => {
       drawerContent={(props) => <CustomDrawer {...props} />}
       screenOptions={{
         headerShown: false,
+        drawerStyle: {
+          backgroundColor: '#F8F0E5',
+          width: '60%',
+        },
+        drawerActiveBackgroundColor: '#ded5ca',
+        drawerActiveTintColor: '#102C57',
+        drawerInactiveTintColor: '#102C57',
       }}
     >
       <Drawer.Screen name="Home" component={HomeScreen} />
