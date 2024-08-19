@@ -60,6 +60,7 @@ export const styles = StyleSheet.create({
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
     color: '#333',
+    fontWeight: 'bold',
   },
   bestSellersContainer: {
     marginTop: 15,
@@ -69,6 +70,7 @@ export const styles = StyleSheet.create({
   bestSellersTitle: {
     fontFamily: 'Gantari-Bold',
     fontSize: 20,
+    fontWeight: 'bold',
     marginBottom: 10,
     marginLeft: 10,
   },
@@ -91,8 +93,9 @@ export const styles = StyleSheet.create({
     textAlign: 'center',
   },
   readyText: {
-    fontSize: 23,
-    fontFamily: 'Gantari-Bold',
+    fontSize: 20,
+    fontWeight: 'bold',
+    fontFamily: 'Gantari-Regular',
     marginTop: 10,
     color: '#333',
   },
