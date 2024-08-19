@@ -31,7 +31,7 @@ const CustomDrawer = (props: any) => {
       <View style={drawerStyles.logoutContainer}>
         <TouchableNativeFeedback>
           <View style={drawerStyles.logout}>
-            <Ionicons name='log-out-sharp' size={40} />
+            <Ionicons name='log-out-sharp' size={30} />
             <Text style={drawerStyles.logoutText}>Logout</Text>
           </View>
         </TouchableNativeFeedback>
