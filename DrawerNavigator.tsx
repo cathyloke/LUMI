@@ -5,26 +5,33 @@ import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import RewardsScreen from './screens/RewardsScreen';
 import ProfileScreen from './screens/ProfileScreen';
-import { View, Text, TouchableNativeFeedback } from 'react-native';
+import { View, Text, TouchableNativeFeedback, Image, TouchableOpacity } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Drawer = createDrawerNavigator();
 
 const CustomDrawer = (props: any) => {
+  const { navigation } = props;
+
   return (
-    <View style={{flex: 1}}>
-      <View style={{flex: .15, backgroundColor: '#FFAD60', justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 15}}>
-        <Ionicons name='logo-reddit' size={60} color='white'/>
-        <Text style={{color: 'white', fontSize: 14}}>(username)</Text>
+    <View style={{ flex: 1 }}>
+      <View style={drawerStyles.header}>
+        <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+          <Image 
+            source={{ uri: 'https://via.placeholder.com/100' }} // Placeholder image URL
+            style={drawerStyles.profileImage}
+          />
+        </TouchableOpacity>
+        <Text style={drawerStyles.username}>(username)</Text>
       </View>
-      <View style={{flex: .75}}>
+      <View style={drawerStyles.drawerItems}>
         <DrawerItemList {...props} />
       </View>
-      <View style={{flex: .1, paddingLeft: 15, paddingTop: 5, borderTopWidth: 1}}>
+      <View style={drawerStyles.logoutContainer}>
         <TouchableNativeFeedback>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={drawerStyles.logout}>
             <Ionicons name='log-out-sharp' size={40} />
-            <Text style={{fontSize: 15}}>Logout</Text>
+            <Text style={drawerStyles.logoutText}>Logout</Text>
           </View>
         </TouchableNativeFeedback>
       </View>
