@@ -9,8 +9,8 @@ const drawerStyles = StyleSheet.create({
     paddingBottom: 15,
   },
   profileImage: {
-    width: 100,
-    height: 100,
+    width: 80,
+    height: 80,
     borderRadius: 50,
     borderWidth: 2,
     borderColor: 'white',
