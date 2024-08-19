@@ -74,42 +74,42 @@ const categories={
     id:'001',
     title:'Americano',
     price:'RM 5.90',
-    image:require('../img/food/DrinksAmericano.png'),
+    image:require('../img/drinks/DrinksAmericano.png'),
     description:'Americano, diluting an espresso shot with hot water, have a lighter taste',
     type:'coffee'
   },{
     id:'002',
     title:'Latte',
     price:'RM 9.90',
-    image:require('../img/food/DrinksLatte.png'),
+    image:require('../img/drinks/DrinksLatte.png'),
     description:'Latte, made by espresso and steamed milk',
     type:'coffee'
   },{
     id:'003',
     title:'Latte special',
     price:'RM 12.90',
-    image:require('../img/food/DrinksLatteSpecial.png'),
+    image:require('../img/drinks/DrinksLatteSpecial.png'),
     description:'Latte, made by espresso and steamed milk, added with chocolate and ice cream',
     type:'coffee'
   },{
     id:'004',
     title:'Cappuccino',
     price:'RM 8.90',
-    image:require('../img/food/DrinksCappuccino.png'),
+    image:require('../img/drinks/DrinksCappuccino.png'),
     description:'Cappuccino, espresso-based coffee drink with steamed milk including a layer of milk foam',
     type:'coffee'
   },{
     id:'005',
     title:'Mocha',
     price:'RM 9.90',
-    image:require('../img/food/DrinksMocha.png'),
+    image:require('../img/drinks/DrinksMocha.png'),
     description:'Mocha, used good quality coffee that is made from a specific coffee bean',
     type:'coffee'
   },{
     id:'006',
     title:'Matcha Latte',
     price:'RM 12.90',
-    image:require('../img/food/DrinksMatchaLatte.jpeg'),
+    image:require('../img/drinks/DrinksMatchaLatte.jpeg'),
     description:'Matcha Latte, Latte with mixing of matcha powder, steaming hot milk and honey',
     type:'coffee'
   }]
