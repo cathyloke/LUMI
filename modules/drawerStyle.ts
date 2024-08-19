@@ -9,15 +9,16 @@ const drawerStyles = StyleSheet.create({
     paddingBottom: 15,
   },
   profileImage: {
-    width: 80,
-    height: 80,
+    width: 70,
+    height: 70,
     borderRadius: 50,
     borderWidth: 2,
     borderColor: 'white',
   },
   username: {
     color: 'white',
-    fontSize: 15,
+    fontSize: 14,
+    fontFamily: 'Gantari-Regular',
     marginTop: 10,
   },
   drawerItems: {
