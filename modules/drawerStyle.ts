@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const drawerStyles = StyleSheet.create({
   header: {
     flex: 0.2,
-    backgroundColor: '#FFAD60',
+    backgroundColor: '#102C57',
     justifyContent: 'flex-end',
     alignItems: 'center',
     paddingBottom: 15,
@@ -13,7 +13,7 @@ const drawerStyles = StyleSheet.create({
     height: 70,
     borderRadius: 50,
     borderWidth: 2,
-    borderColor: 'white',
+    borderColor: '#F8F0E5',
   },
   username: {
     color: 'white',
