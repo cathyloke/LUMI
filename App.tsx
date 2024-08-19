@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerItemList } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dimensions, View, Text, TouchableNativeFeedback } from 'react-native';
+import { Dimensions, View, Text, TouchableNativeFeedback, TouchableOpacity } from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
@@ -93,19 +93,19 @@ function AppBottomStack() {
 
 const CustomDrawer = (props: any) => {
   return (
-    <View style={{flex: 1}}>
-      <View style={{flex: .15, backgroundColor: '#FFAD60', justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 15}}>
-        <Ionicons name='logo-reddit' size={60} color='white'/>
-        <Text style={{color: 'white', fontSize: 15}}>My Profile Pic</Text>
+    <View style={{ flex: 1 }}>
+      <View style={{ flex: 0.15, backgroundColor: '#FFAD60', justifyContent: 'flex-end', alignItems: 'center', paddingBottom: 15 }}>
+        <Ionicons name='logo-reddit' size={60} color='white' />
+        <Text style={{ color: 'white', fontSize: 15 }}>(username)</Text>
       </View>
-      <View style={{flex: .75}}>
+      <View style={{ flex: 0.75 }}>
         <DrawerItemList {...props} />
       </View>
-      <View style={{flex: .1, paddingLeft: 15, paddingTop: 5, borderTopWidth: 1}}>
+      <View style={{ flex: 0.1, paddingLeft: 15, paddingTop: 5, borderTopWidth: 1 }}>
         <TouchableNativeFeedback>
-          <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
             <Ionicons name='log-out-sharp' size={40} />
-            <Text style={{fontSize: 15}}>Logout</Text>
+            <Text style={{ fontSize: 15 }}>Logout</Text>
           </View>
         </TouchableNativeFeedback>
       </View>
@@ -113,8 +113,29 @@ const CustomDrawer = (props: any) => {
   );
 };
 
+// Define components outside of inline function
+const AboutLumiereScreen = () => (
+  <DrawerScreenWithTabs component={AboutScreen} title="About Lumière" />
+);
+
+const MyOrdersScreen = () => (
+  <DrawerScreenWithTabs component={OrderHistoryScreen} title="My Orders" />
+);
+
+const HelpCentreScreenWithTabs = () => (
+  <DrawerScreenWithTabs component={HelpCentreScreen} title="Help Centre" />
+);
+
+const FeedbackScreenWithTabs = () => (
+  <DrawerScreenWithTabs component={FeedbackScreen} title="Feedback" />
+);
+
+const TNCScreenWithTabs = () => (
+  <DrawerScreenWithTabs component={TNCScreen} title="Terms & Conditions" />
+);
+
 // Integrating Bottom Tabs with Drawer Screens
-function DrawerScreenWithTabs({component: Component, title}: any) {
+function DrawerScreenWithTabs({ component: Component, title }: any) {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name={title} component={Component} />
@@ -128,11 +149,11 @@ function AppDrawerStack() {
   return (
     <DrawerStack.Navigator initialRouteName="Home" drawerContent={(props: any) => <CustomDrawer {...props} />}>
       <DrawerStack.Screen name="Home" component={AppBottomStack} />
-      <DrawerStack.Screen name="About Lumière" component={() => DrawerScreenWithTabs({component: AboutScreen, title: 'About Lumière'})} />
-      <DrawerStack.Screen name="My Orders" component={() => DrawerScreenWithTabs({component: OrderHistoryScreen, title: 'My Orders'})} />
-      <DrawerStack.Screen name="Help Centre" component={() => DrawerScreenWithTabs({component: HelpCentreScreen, title: 'Help Centre'})} />
-      <DrawerStack.Screen name="Feedback" component={() => DrawerScreenWithTabs({component: FeedbackScreen, title: 'Feedback'})} />
-      <DrawerStack.Screen name="Terms & Conditions" component={() => DrawerScreenWithTabs({component: TNCScreen, title: 'Terms & Conditions'})} />
+      <DrawerStack.Screen name="About Lumière" component={AboutLumiereScreen} />
+      <DrawerStack.Screen name="My Orders" component={MyOrdersScreen} />
+      <DrawerStack.Screen name="Help Centre" component={HelpCentreScreenWithTabs} />
+      <DrawerStack.Screen name="Feedback" component={FeedbackScreenWithTabs} />
+      <DrawerStack.Screen name="Terms & Conditions" component={TNCScreenWithTabs} />
     </DrawerStack.Navigator>
   );
 }
