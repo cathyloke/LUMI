@@ -26,7 +26,7 @@ const App = () => {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: '#F8F0E5',
-            height: windowHeight * 0.12,
+            height: windowHeight * 0.1,
             borderTopLeftRadius: 30,
             borderTopRightRadius: 30,
           },
