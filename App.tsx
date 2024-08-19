@@ -20,7 +20,7 @@ const App = () => {
     <NavigationContainer>
       <Tab.Navigator
         screenOptions={({ navigation }) => ({
-          headerShown: true,
+          headerShown: false,
           headerLeft: () => (
             <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
               <Feather name="menu" size={30} color="#102C57" style={{ marginLeft: 16 }} />
