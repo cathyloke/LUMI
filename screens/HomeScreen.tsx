@@ -129,14 +129,6 @@ const HomeScreen = () => {
           </ScrollView>
         </View>
       </ScrollView>
-      
-      {/* Floating Button for Drawer */}
-      <TouchableOpacity 
-        style={styles.floatingButton} 
-        onPress={() => navigation.openDrawer()}
-      >
-        <Feather name="menu" size={30} color="#fff" />
-      </TouchableOpacity>
     </SafeAreaView>
   );
 };
