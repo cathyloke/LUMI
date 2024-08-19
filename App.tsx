@@ -47,7 +47,7 @@ const App = () => {
           component={HomeScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <Feather name="home" size={35} color={focused ? '#102C57' : '#999'} />
+              <Feather name="home" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -56,7 +56,7 @@ const App = () => {
           component={MenuScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <MaterialIcons name="restaurant-menu" size={35} color={focused ? '#102C57' : '#999'} />
+              <MaterialIcons name="restaurant-menu" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -65,7 +65,7 @@ const App = () => {
           component={RewardsScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <MaterialCommunityIcons name="ticket-outline" size={35} color={focused ? '#102C57' : '#999'} />
+              <MaterialCommunityIcons name="ticket-outline" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -74,7 +74,7 @@ const App = () => {
           component={ProfileScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <Octicons name="person" size={35} color={focused ? '#102C57' : '#999'} />
+              <Octicons name="person" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
