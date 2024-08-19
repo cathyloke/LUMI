@@ -10,7 +10,21 @@ const Drawer = createDrawerNavigator();
 
 const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      screenOptions={{
+         headerShown: false,
+         drawerLabelStyle: {
+            fontSize: 16,
+            fontFamily: 'Gantari-Regular',
+         },
+         drawerStyle: {
+            backgroundColor: '#F8F0E5',
+            width: 220,
+         },
+         drawerActiveTintColor: '#102C57',
+         drawerInactiveTintColor: '#999',
+      }}
+    >
       <Drawer.Screen name="Home" component={HomeScreen} />
       <Drawer.Screen name="Menu" component={MenuScreen} />
       <Drawer.Screen name="Rewards" component={RewardsScreen} />
