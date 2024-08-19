@@ -67,7 +67,7 @@ const App = () => {
           component={RewardsScreen}
           options={{
             tabBarIcon: ({ focused }) => (
-              <MaterialCommunityIcons name="ticket-outline" size={30} color={focused ? '#102C57' : '#999'} />
+              <Feather name="gift" size={30} color={focused ? '#102C57' : '#999'} />
             ),
           }}
         />
