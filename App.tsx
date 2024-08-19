@@ -25,16 +25,15 @@ const App = () => {
         screenOptions={{
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: '#f5f5f5',
-            height: windowHeight * 0.13,
+            backgroundColor: '#F8F0E5',
+            height: windowHeight * 0.12,
             borderTopLeftRadius: 30,
             borderTopRightRadius: 30,
           },
-          tabBarActiveTintColor: '#000',
+          tabBarActiveTintColor: '#102C57',
           tabBarInactiveTintColor: '#999',
           tabBarLabelStyle: {
             fontSize: 12,
-            fontWeight: 'bold',
             fontFamily: 'Gantari-Regular',
             marginBottom: 20,
           },
@@ -48,7 +47,7 @@ const App = () => {
           component={HomeScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <Feather name="home" size={35} color={focused ? '#000' : '#999'} />
+              <Feather name="home" size={35} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -57,7 +56,7 @@ const App = () => {
           component={MenuScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <MaterialIcons name="restaurant-menu" size={35} color={focused ? '#000' : '#999'} />
+              <MaterialIcons name="restaurant-menu" size={35} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -66,7 +65,7 @@ const App = () => {
           component={RewardsScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <MaterialCommunityIcons name="ticket-outline" size={35} color={focused ? '#000' : '#999'} />
+              <MaterialCommunityIcons name="ticket-outline" size={35} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -75,7 +74,7 @@ const App = () => {
           component={ProfileScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <Octicons name="person" size={35} color={focused ? '#000' : '#999'} />
+              <Octicons name="person" size={35} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
