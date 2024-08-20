@@ -1,83 +1,82 @@
 import React from 'react';
-import { NavigationContainer, DrawerActions } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Dimensions, View, TouchableOpacity } from 'react-native';
-import Feather from 'react-native-vector-icons/Feather';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Octicons from 'react-native-vector-icons/Octicons';
-import DrawerNavigator from './DrawerNavigator'; // Import your drawer navigator
+import { Dimensions } from 'react-native';
+
+import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import RewardsScreen from './screens/RewardsScreen';
 import ProfileScreen from './screens/ProfileScreen';
 
+import Feather from 'react-native-vector-icons/Feather';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Octicons from 'react-native-vector-icons/Octicons';
+
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+
   const windowHeight = Dimensions.get('window').height;
 
   return (
     <NavigationContainer>
       <Tab.Navigator
-        screenOptions={({ navigation }) => ({
+        screenOptions={{
           headerShown: false,
-          headerLeft: () => (
-            <TouchableOpacity onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}>
-              <Feather name="menu" size={30} color="#102C57" style={{ marginLeft: 16 }} />
-            </TouchableOpacity>
-          ),
           tabBarStyle: {
-            backgroundColor: '#F8F0E5',
-            height: windowHeight * 0.1,
-            borderTopLeftRadius: 30,
-            borderTopRightRadius: 30,
+            backgroundColor: '#EADBC8',
+            height: windowHeight * 0.13,
+            borderTopLeftRadius: 35,
+            borderTopRightRadius: 35,
           },
           tabBarActiveTintColor: '#102C57',
           tabBarInactiveTintColor: '#999',
           tabBarLabelStyle: {
             fontSize: 12,
+            fontWeight: 'bold',
             fontFamily: 'Gantari-Regular',
-            marginBottom: 16,
+            marginBottom: 20,
           },
           tabBarIconStyle: {
-            marginTop: 16,
+            marginTop: 20,
           },
-        })}
+        }}
       >
         <Tab.Screen 
-          name="Home"
-          component={DrawerNavigator} // The drawer navigator is wrapped in the home tab
+          name="Home" 
+          component={HomeScreen}
           options={{
-            tabBarIcon: ({ focused }) => (
-              <Feather name="home" size={30} color={focused ? '#102C57' : '#999'} />
-            ),
+            tabBarIcon: (({ focused }: any) => (
+              <Feather name="home" size={35} color={focused ? '#102C57' : '#999'} />
+            ))
           }}
         />
         <Tab.Screen 
-          name="Menu"
+          name="Menu" 
           component={MenuScreen}
           options={{
-            tabBarIcon: ({ focused }) => (
-              <MaterialIcons name="restaurant-menu" size={30} color={focused ? '#102C57' : '#999'} />
-            ),
+            tabBarIcon: (({ focused }: any) => (
+              <MaterialIcons name="restaurant-menu" size={35} color={focused ? '#102C57' : '#999'} />
+            ))
           }}
         />
         <Tab.Screen 
-          name="Rewards"
+          name="Rewards" 
           component={RewardsScreen}
           options={{
-            tabBarIcon: ({ focused }) => (
-              <Feather name="gift" size={30} color={focused ? '#102C57' : '#999'} />
-            ),
+            tabBarIcon: (({ focused }: any) => (
+              <MaterialCommunityIcons name="ticket-outline" size={35} color={focused ? '#102C57' : '#999'} />
+            ))
           }}
         />
         <Tab.Screen 
-          name="Profile"
+          name="Profile" 
           component={ProfileScreen}
           options={{
-            tabBarIcon: ({ focused }) => (
-              <Octicons name="person" size={30} color={focused ? '#102C57' : '#999'} />
-            ),
+            tabBarIcon: (({ focused }: any) => (
+              <Octicons name="person" size={35} color={focused ? '#102C57' : '#999'} />
+            ))
           }}
         />
       </Tab.Navigator>
