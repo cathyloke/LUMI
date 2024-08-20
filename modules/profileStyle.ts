@@ -51,7 +51,7 @@ export const styles = StyleSheet.create({
   button: {
     width: '100%',
     padding: 15,
-    backgroundColor: '#FFAB91', // Caramel
+    backgroundColor: '#102C57',
     borderRadius: 50,
     alignItems: 'center',
     marginTop: 10,
@@ -59,7 +59,7 @@ export const styles = StyleSheet.create({
   buttonText: {
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
-    color: '#102C57', // Dark Chocolate
+    color: '#F8F0E5',
   },
   logoutButton: {
     backgroundColor: '#E57373', // Red accent for logout
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
   optionButton: {
     width: '100%',
     padding: 15,
-    backgroundColor: '#EADBC8', // Cappuccino Cream
+    backgroundColor: '#102C57',
     borderRadius: 50,
     alignItems: 'center',
     marginBottom: 10,
@@ -79,7 +79,7 @@ export const styles = StyleSheet.create({
   optionText: {
     fontFamily: 'Gantari-Regular',
     fontSize: 18,
-    color: '#102C57',
+    color: '#F8F0E5',
   },
 
   title:{
