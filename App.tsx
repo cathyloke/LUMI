@@ -26,7 +26,7 @@ const App = () => {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: '#EADBC8',
-            height: windowHeight * 0.13,
+            height: windowHeight * 0.1,
             borderTopLeftRadius: 35,
             borderTopRightRadius: 35,
           },
@@ -36,10 +36,10 @@ const App = () => {
             fontSize: 12,
             fontWeight: 'bold',
             fontFamily: 'Gantari-Regular',
-            marginBottom: 20,
+            marginBottom: 16,
           },
           tabBarIconStyle: {
-            marginTop: 20,
+            marginTop: 16,
           },
         }}
       >
@@ -48,7 +48,7 @@ const App = () => {
           component={HomeScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <Feather name="home" size={35} color={focused ? '#102C57' : '#999'} />
+              <Feather name="home" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -57,7 +57,7 @@ const App = () => {
           component={MenuScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <MaterialIcons name="restaurant-menu" size={35} color={focused ? '#102C57' : '#999'} />
+              <MaterialIcons name="restaurant-menu" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -66,7 +66,7 @@ const App = () => {
           component={RewardsScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <MaterialCommunityIcons name="ticket-outline" size={35} color={focused ? '#102C57' : '#999'} />
+              <Feather name="gift" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
@@ -75,7 +75,7 @@ const App = () => {
           component={ProfileScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
-              <Octicons name="person" size={35} color={focused ? '#102C57' : '#999'} />
+              <Octicons name="person" size={30} color={focused ? '#102C57' : '#999'} />
             ))
           }}
         />
