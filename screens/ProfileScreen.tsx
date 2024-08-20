@@ -46,7 +46,7 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
             style={styles.profileImage}
           />
           <View style={styles.infoContainer}>
-            <Text style={styles.label}>Name:</Text>
+            <Text style={styles.label}>Username:</Text>
             {isEditing ? (
               <TextInput
                 style={styles.input}
