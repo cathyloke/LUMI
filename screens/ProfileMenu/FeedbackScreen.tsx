@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity , SafeAreaView, TextInput, Button} from 'react-native';
-import { styles } from '../modules/profileStyle';
+import { styles } from '../../modules/profileStyle';
 
 const FeedbackScreen = () => {
    // Create a state array to track the selection status of each box

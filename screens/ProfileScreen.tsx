@@ -12,12 +12,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { styles } from '../modules/profileStyle';
 import { generalStyles } from '../modules/generalStyle';
 
-import OrderHistoryScreen from './OrderHistoryScreen';
-import HelpCentreScreen from './HelpCentreScreen';
-import FeedbackScreen from './FeedbackScreen';
-import TNCScreen from './TNCScreen';
-import AboutScreen from './AboutScreen';
-import LogInScreen from './LogInScreen';
+import OrderHistoryScreen from './ProfileMenu/OrderHistoryScreen';
+import HelpCentreScreen from './ProfileMenu/HelpCentreScreen';
+import FeedbackScreen from './ProfileMenu/FeedbackScreen';
+import TNCScreen from './ProfileMenu/TNCScreen';
+import AboutScreen from './ProfileMenu/AboutScreen';
+import LogInScreen from './Account/LogInScreen';
+import LogoutScreen from './Account/LogoutScreen';
 
 const Stack = createStackNavigator();
 
@@ -74,7 +75,7 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
               {isEditing ? 'Save' : 'Edit Profile'}
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={[styles.button, styles.logoutButton]}>
+          <TouchableOpacity style={[styles.button, styles.logoutButton]} onPress={() => navigation.navigate('LogoutScreen')}>
             <Text style={styles.buttonText}>Log Out</Text>
           </TouchableOpacity>
         </View>
@@ -82,7 +83,7 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
         <View style={styles.optionsContainer}>
           <TouchableOpacity 
             style={styles.optionButton}
-            onPress={() => navigation.navigate('LogInScreen')}
+            onPress={() => navigation.navigate('OrderHistoryScreen')}
           >
             <Text style={styles.optionText}>My Orders</Text>
           </TouchableOpacity>
@@ -128,11 +129,12 @@ const ProfileScreen = () => {
         component={ProfileDetailsScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="LogInScreen" component={LogInScreen} options={{title: 'LogInScreen'}}/>
+      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'OrderHistoryScreen'}}/>
       <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} options={{title: 'Help Centre'}}/>
       <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} options={{title: 'Feedback'}}/>
       <Stack.Screen name="TNCScreen" component={TNCScreen} options={{title: 'Terms & Conditions'}}/>
       <Stack.Screen name="AboutScreen" component={AboutScreen} options={{title: 'About Lumière'}}/>
+      <Stack.Screen name="LogoutScreen" component={LogoutScreen} options={{title: 'Logout'}}/>
     </Stack.Navigator>
   );
 };
