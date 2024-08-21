@@ -7,6 +7,7 @@ import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import RewardsScreen from './screens/RewardsScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import CartScreen from './screens/CartScreen';
 
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -52,8 +53,8 @@ const App = () => {
             ))
           }}
         />
-        <Tab.Screen 
-          name="Menu" 
+        <Tab.Screen
+          name="Menu"
           component={MenuScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
@@ -62,7 +63,16 @@ const App = () => {
           }}
         />
         <Tab.Screen 
-          name="Rewards" 
+          name="Cart"
+          component={CartScreen}
+          options={{
+            tabBarIcon: (({ focused }: any) => (
+              <MaterialCommunityIcons name="cart-outline" size={30} color={focused ? '#102C57' : '#999'} />
+            )),
+          }}
+        />
+        <Tab.Screen
+          name="Rewards"
           component={RewardsScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
@@ -71,7 +81,7 @@ const App = () => {
           }}
         />
         <Tab.Screen 
-          name="Profile" 
+          name="Profile"
           component={ProfileScreen}
           options={{
             tabBarIcon: (({ focused }: any) => (
