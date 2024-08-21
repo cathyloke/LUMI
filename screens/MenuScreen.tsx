@@ -126,6 +126,20 @@ const menu:Categories={ //item
     image:require('../img/drinks/DrinksMatchaLatte.jpeg'),
     description:'Matcha Latte, Latte with mixing of matcha powder, steaming hot milk and honey',
     type:'Coffee'
+  },{
+    id:'007',
+    title:'Matcha Milk Tea',
+    price:'RM 12.90',
+    image:require('../img/drinks/DrinksMatchaMilkTea.png'),
+    description:'Matcha Milk Tea, mixing of matcha powder and milk, added with boba',
+    type:'Milk Tea'
+  },{
+    id:'008',
+    title:'Taro Milk Tea',
+    price:'RM 10.90',
+    image:require('../img/drinks/DrinksTaroMilkTea.png'),
+    description:'Taro Milk Tea, A drink that popular in Taro Lovers',
+    type:'Milk Tea'
   }]
 }
 
@@ -213,35 +227,37 @@ const CategoryScreen = ({navigation, route}: any) => {
   const filteredItems = selectedType === 'All' ? menu[category]:menu[category].filter(item=>item.type === selectedType);
 
   return (
-    <SafeAreaView style={styles.content}>
-      <Picker 
-        selectedValue={selectedType} 
-        style={styles.picker} 
-        onValueChange={(itemValue) => setSelectedType(itemValue)}
-      >
-        {foodTypes.map(type => (<Picker.Item key={type} label={type} value={type}/>))}
-      </Picker>
+    <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.content}>
+        <Picker 
+          selectedValue={selectedType} 
+          style={styles.picker} 
+          onValueChange={(itemValue) => setSelectedType(itemValue)}
+        >
+          {foodTypes.map(type => (<Picker.Item key={type} label={type} value={type}/>))}
+        </Picker>
 
-      <FlatList
-        data={filteredItems}
-        renderItem={({ item }) => (
-          <TouchableHighlight 
-            style={styles.menuRow} 
-            underlayColor="#DAC0A3"
-            onPress={() => navigation.navigate('ItemDetail', { item })}
-          >
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-              <Image source={item.image} style={styles.imageRow} />
-              <View style={styles.textContainer}>
-                <Text style={styles.title}>{item.title}</Text>
-                <Text style={styles.price}>{item.price}</Text>
+        <FlatList
+          data={filteredItems}
+          renderItem={({ item }) => (
+            <TouchableHighlight 
+              style={styles.menuRow} 
+              underlayColor="#DAC0A3"
+              onPress={() => navigation.navigate('ItemDetail', { item })}
+            >
+              <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <Image source={item.image} style={styles.imageRow} />
+                <View style={styles.textContainer}>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <Text style={styles.price}>{item.price}</Text>
+                </View>
               </View>
-            </View>
-          </TouchableHighlight>
-        )}
-        keyExtractor={item => item.id}
-        contentContainerStyle={styles.listContainer}
-      />
+            </TouchableHighlight>
+          )}
+          keyExtractor={item => item.id}
+          contentContainerStyle={styles.listContainer}
+        />
+      </SafeAreaView>
     </SafeAreaView>
   );
 };
