@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { TouchableOpacity, View, Text } from 'react-native';
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 
+//custom drawer for log out
 const LogoutScreen = () => {
    return (
       <View>
-         <View>
-            <Text>Logout</Text>
-         </View>
+         <Text>Log out</Text>
       </View>
    );
 };

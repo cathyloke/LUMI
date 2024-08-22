@@ -1,13 +1,25 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Dimensions } from 'react-native';
 
 import HomeScreen from './screens/HomeScreen';
 import MenuScreen from './screens/MenuScreen';
 import RewardsScreen from './screens/RewardsScreen';
-import ProfileScreen from './screens/ProfileScreen';
+import ProfileDetailScreen from './screens/ProfileMenu/ProfileDetailScreen';
 import CartScreen from './screens/CartScreen';
+
+import { generalStyles } from './modules/generalStyle';
+
+import OrderHistoryScreen from './screens/ProfileMenu/OrderHistoryScreen';
+import HelpCentreScreen from './screens/ProfileMenu/HelpCentreScreen';
+import FeedbackScreen from './screens/ProfileMenu/FeedbackScreen';
+import TNCScreen from './screens/ProfileMenu/TNCScreen';
+import AboutScreen from './screens/ProfileMenu/AboutScreen';
+import LogoutScreen from './screens/Account/LogoutScreen';
+
 
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -95,3 +107,29 @@ const App = () => {
 };
 
 export default App;
+
+
+const Stack = createStackNavigator();
+
+const ProfileScreen = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerTitleStyle: generalStyles.header,
+      }}
+    >
+      <Stack.Screen
+        name="ProfileDetailsScreen"
+        component={ProfileDetailScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'OrderHistoryScreen'}}/>
+      <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} options={{title: 'Help Centre'}}/>
+      <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} options={{title: 'Feedback'}}/>
+      <Stack.Screen name="TNCScreen" component={TNCScreen} options={{title: 'Terms & Conditions'}}/>
+      <Stack.Screen name="AboutScreen" component={AboutScreen} options={{title: 'About Lumière'}}/>
+      <Stack.Screen name="LogoutScreen" component={LogoutScreen} options={{title: 'Logout'}}/>
+    </Stack.Navigator>
+  );
+};
+

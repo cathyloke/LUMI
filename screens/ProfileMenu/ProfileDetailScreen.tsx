@@ -9,16 +9,7 @@ import {
   TextInput,
 } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { styles } from '../modules/profileStyle';
-import { generalStyles } from '../modules/generalStyle';
-
-import OrderHistoryScreen from './ProfileMenu/OrderHistoryScreen';
-import HelpCentreScreen from './ProfileMenu/HelpCentreScreen';
-import FeedbackScreen from './ProfileMenu/FeedbackScreen';
-import TNCScreen from './ProfileMenu/TNCScreen';
-import AboutScreen from './ProfileMenu/AboutScreen';
-import LogInScreen from './Account/LogInScreen';
-import LogoutScreen from './Account/LogoutScreen';
+import { styles } from '../../modules/profileStyle';
 
 const Stack = createStackNavigator();
 
@@ -43,7 +34,7 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
         {/* FOR USER PROFILE */}
         <View style={styles.profileContainer}>
           <Image
-            source={require('../img/profile-placeholder.jpeg')}
+            source={require('../../img/profile-placeholder.jpeg')}
             style={styles.profileImage}
           />
           <View style={styles.infoContainer}>
@@ -117,26 +108,5 @@ const ProfileDetailsScreen = ({route, navigation}: any) => {
   );
 };
 
-const ProfileScreen = () => {
-  return (
-    <Stack.Navigator
-      screenOptions={{
-        headerTitleStyle: generalStyles.header,
-      }}
-    >
-      <Stack.Screen
-        name="ProfileDetailsScreen"
-        component={ProfileDetailsScreen}
-        options={{ headerShown: false }}
-      />
-      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'OrderHistoryScreen'}}/>
-      <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} options={{title: 'Help Centre'}}/>
-      <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} options={{title: 'Feedback'}}/>
-      <Stack.Screen name="TNCScreen" component={TNCScreen} options={{title: 'Terms & Conditions'}}/>
-      <Stack.Screen name="AboutScreen" component={AboutScreen} options={{title: 'About Lumière'}}/>
-      <Stack.Screen name="LogoutScreen" component={LogoutScreen} options={{title: 'Logout'}}/>
-    </Stack.Navigator>
-  );
-};
 
-export default ProfileScreen;
+export default ProfileDetailsScreen;
