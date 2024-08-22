@@ -88,6 +88,9 @@ const ItemDetailScreen = ({route}: any) => { //item detail screen
   );
 };
 
+const keyExtractor = (item: FoodItem, index: number) => {
+  return item.id ? item.id : `item-${index}`;
+};
 
 const CategoryScreen = ({navigation, route}: any) => {
 
@@ -173,7 +176,7 @@ const CategoryScreen = ({navigation, route}: any) => {
               </View>
             </TouchableHighlight>
           )}
-          keyExtractor={item => item.id}
+          keyExtractor={keyExtractor}
           contentContainerStyle={styles.listContainer}
         />
       </SafeAreaView>
