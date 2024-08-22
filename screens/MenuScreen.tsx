@@ -35,17 +35,6 @@ const CustomStackContent = ({ navigation }: any) => { //side bar
   return (
     <View style={styles.sidebar}>
       <TouchableHighlight
-        style={[styles.sidebarItem, activeCategory === 'All' && { backgroundColor: '#DAC0A3' }]}
-        underlayColor="#DAC0A3"
-        onPress={() => handlePress('All')}
-      >
-        <View style={{ alignItems: 'center' }}>
-          <MaterialCommunityIcons name="filter" size={24} color={activeCategory === 'All' ? '#102C57' : '#333'} />
-          <Text style={[styles.sidebarText, activeCategory === 'All' && { color: '#102C57' }]}>All</Text>
-        </View>
-      </TouchableHighlight>
-
-      <TouchableHighlight
         style={[styles.sidebarItem, activeCategory === 'Food' && { backgroundColor: '#DAC0A3' }]}
         underlayColor="#DAC0A3"
         onPress={() => handlePress('Food')}
@@ -151,7 +140,6 @@ const CategoryScreen = ({navigation, route}: any) => {
   const foodTypes = ['All', ...new Set(currentMenu.map(item=>item.type))];
 
   const filteredItems = selectedType === 'All' ? currentMenu:currentMenu.filter(item=>item.type === selectedType);
-
  
   return (
     <SafeAreaView style={styles.container}>
