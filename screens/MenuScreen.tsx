@@ -164,9 +164,10 @@ const CategoryScreen = ({navigation, route}: any) => {
             >
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                 <Image source={{ uri: item.image }} style={styles.imageRow} />
-                
+
                 <View style={styles.textContainer}>
                   <Text style={styles.title}>{item.name}</Text>
+                  
                   <Text style={styles.price}>RM{item.price}</Text>
                 </View>
               </View>
