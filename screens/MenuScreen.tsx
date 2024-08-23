@@ -68,7 +68,7 @@ const ItemDetailScreen = ({route}: any) => { //item detail screen
       <View style={{flex:1,justifyContent:'center',marginBottom:20}}>
         <Image source={item.image} style={styles.detailImage} />
         <Text style={styles.detailTitle}>{item.title}</Text>
-        <Text style={styles.detailPrice}>{item.price}</Text>
+        <Text style={styles.detailPrice}>RM {item.price}</Text>
         <Text style={styles.detailDescription}>{item.description}</Text>
 
         <View style={{ flexDirection:'row',alignItems:'center',justifyContent:'center', marginTop:20}}>
@@ -166,12 +166,11 @@ const CategoryScreen = ({navigation, route}: any) => {
               onPress={() => navigation.navigate('ItemDetail', { item })}
             >
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <Image source={{ uri: item.image }} style={styles.imageRow} />
+                <Image source={item.image} style={styles.imageRow} />
 
                 <View style={styles.textContainer}>
                   <Text style={styles.title}>{item.name}</Text>
-                  
-                  <Text style={styles.price}>RM{item.price}</Text>
+                  <Text style={styles.price}>RM {item.price}</Text>
                 </View>
               </View>
             </TouchableHighlight>

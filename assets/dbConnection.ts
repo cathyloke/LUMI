@@ -1,13 +1,12 @@
 import {SQLiteDatabase, enablePromise, openDatabase} from 'react-native-sqlite-storage';
 
-const databaseName = 'lumiere.sqlite';
+const databaseName = 'lumiereUpdated.sqlite';
 
 enablePromise(true);
 
 export const getDBConnection = async() => {
     return await openDatabase(
-        {name: `${databaseName}`, 
-        createFromLocation:`~${databaseName}`},
+        {name: `${databaseName}`, createFromLocation:`~${databaseName}`},
       openCallback,
       errorCallback,
     );
@@ -61,6 +60,44 @@ export const getUsers = async( db: SQLiteDatabase ): Promise<any> => {
       }
 }
 
+const getImage = (imageName: string) => {
+  switch (imageName) {
+    case 'FoodEggCroissantSandwich':
+      return require('../img/food/FoodEggCroissantSandwich.png');
+    case 'FoodBerryPancakes':
+      return require('../img/food/FoodBerryPancakes.png');
+    case 'FoodAvocadoToast':
+      return require('../img/food/FoodAvocadoToast.png');
+    case 'FoodChocolateCake':
+      return require('../img/food/FoodChocolateCake.png');
+    case 'FoodNewYorkCheesecake':
+      return require('../img/food/FoodNewYorkCheesecake.jpeg');
+    case 'FoodTiramisuCake':
+      return require('../img/food/FoodTiramisuCake.jpg');
+    case 'FoodHokkaidoCheeseTart':
+      return require('../img/food/FoodHokkaidoCheeseTart.png');
+    case 'FoodMacarons':
+      return require('../img/food/FoodMacarons.jpg');
+
+    case 'DrinksAmericano':
+      return require('../img/drinks/DrinksAmericano.png');
+    case 'DrinksLatte':
+      return require('../img/drinks/DrinksLatte.png');
+    case 'DrinksLatteSpecial':
+      return require('../img/drinks/DrinksLatteSpecial.png');
+    case 'DrinksCappuccino':
+      return require('../img/drinks/DrinksCappuccino.png');
+    case 'DrinksMocha':
+      return require('../img/drinks/DrinksMocha.png');
+    case 'DrinksMatchaLatte':
+      return require('../img/drinks/DrinksMatchaLatte.jpeg');
+    case 'DrinksMatchaMilkTea':
+      return require('../img/drinks/DrinksMatchaMilkTea.png');
+    case 'DrinksTaroMilkTea':
+      return require('../img/drinks/DrinksTaroMilkTea.png');
+  }
+};
+
 export const getMenuData = async (db: SQLiteDatabase, category?: string): Promise<any> => {
   try {
     const menuData: any = [];
@@ -69,8 +106,11 @@ export const getMenuData = async (db: SQLiteDatabase, category?: string): Promis
     
     const results = await db.executeSql(query, params);
     results.forEach(result => {
-      (result.rows.raw()).forEach((item: any) => {
-        menuData.push(item);
+      result.rows.raw().forEach((item: any) => {
+        menuData.push({
+          ...item,
+          image: getImage(item.image)
+        });
       });
     });
     
