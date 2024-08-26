@@ -170,7 +170,7 @@ const CategoryScreen = ({navigation, route}: any) => {
 
                 <View style={styles.textContainer}>
                   <Text style={styles.title}>{item.name}</Text>
-                  <Text style={styles.price}>RM {item.price}</Text>
+                  <Text style={styles.price}>RM {item.price.toFixed(2)}</Text>
                 </View>
               </View>
             </TouchableHighlight>
