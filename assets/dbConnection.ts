@@ -1,6 +1,6 @@
 import {SQLiteDatabase, enablePromise, openDatabase} from 'react-native-sqlite-storage';
 
-const databaseName = 'lumiereUpdated.sqlite';
+const databaseName = 'Lumiere.sqlite';
 
 enablePromise(true);
 
