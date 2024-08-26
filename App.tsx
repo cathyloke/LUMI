@@ -123,7 +123,7 @@ const ProfileScreen = () => {
         component={ProfileDetailScreen}
         options={{ headerShown: false }}
       />
-      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'OrderHistoryScreen'}}/>
+      <Stack.Screen name="OrderHistoryScreen" component={OrderHistoryScreen} options={{title: 'My Order History'}}/>
       <Stack.Screen name="HelpCentreScreen" component={HelpCentreScreen} options={{title: 'Help Centre'}}/>
       <Stack.Screen name="FeedbackScreen" component={FeedbackScreen} options={{title: 'Feedback'}}/>
       <Stack.Screen name="TNCScreen" component={TNCScreen} options={{title: 'Terms & Conditions'}}/>

@@ -1,7 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { View, Text } from 'react-native';
 
-const OrderHistoryScreen = () => {
+type CartItem = {
+   id: string;
+   name: string;
+   image: any;
+   price: number;
+   quantity: number; 
+}
+
+const CartScreen = ({navigation}:any) => {
+   const [cartItems, setCartItems] = useState<CartItem[]>();
+
+   
    return (
       <View>
          <View>
@@ -11,4 +22,4 @@ const OrderHistoryScreen = () => {
    );
 };
 
-export default OrderHistoryScreen;
+export default CartScreen;

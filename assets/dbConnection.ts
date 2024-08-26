@@ -121,22 +121,27 @@ export const getMenuData = async (db: SQLiteDatabase, category?: string): Promis
   }
 };
 
+export const getOrderHistory = async (db: SQLiteDatabase, userID?: string): Promise<any[]> => {
+  try {
+    const orderHistoryData: any[] = [];
+    if (!userID) {
+      throw new Error('User ID is required');
+    }
 
-export const getOrderHistory = async( db: SQLiteDatabase ): Promise<any> => {
-    try{
-        const orderHistoryData : any = [];
-        const query = `SELECT * FROM orderHistory`;
-        const results = await db.executeSql(query);
-        results.forEach(result => {
-            (result.rows.raw()).forEach(( item:any ) => {
-                orderHistoryData.push(item);
-            })
-          });
-        return orderHistoryData;
-      } catch (error) {
-        console.error(error);
-        throw Error('Failed to get order history !!!');
-      }
+    const query = `SELECT * FROM orderHistory JOIN menu ON orderHistory.foodID = menu.foodID WHERE userID = ?`;
+    const results = await db.executeSql(query, [userID]);
+
+    results.forEach(result => {
+      (result.rows.raw()).forEach((item: any) => {
+        orderHistoryData.push({...item, image: getImage(item.image)});
+      });
+    });
+
+    return orderHistoryData;
+  } catch (error) {
+    console.error('Failed to get order history:', error);
+    throw new Error('Failed to get order history');
+  }
 }
 
 
