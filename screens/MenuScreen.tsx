@@ -68,7 +68,7 @@ const ItemDetailScreen = ({route}: any) => { //item detail screen
       <View style={{flex:1,justifyContent:'center',marginBottom:20}}>
         <Image source={item.image} style={styles.detailImage} />
         <Text style={styles.detailTitle}>{item.title}</Text>
-        <Text style={styles.detailPrice}>RM {item.price}</Text>
+        <Text style={styles.detailPrice}>RM {item.price.toFixed(2)}</Text>
         <Text style={styles.detailDescription}>{item.description}</Text>
 
         <View style={{ flexDirection:'row',alignItems:'center',justifyContent:'center', marginTop:20}}>
